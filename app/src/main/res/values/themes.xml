@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.YandexMap" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="actionBarTheme">@style/MyActionBar</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:background">@color/white</item>
+        <item name="title">MAP</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/buenard_bold</item>
+        <item name="elevation">15dp</item>
+        <item name="iconTint">@color/black</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="place"
+            type="com.example.yandexmap.PlaceInfo" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/side_info_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_background"
+        android:fitsSystemWindows="true"
+        android:foregroundGravity="left">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/place_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:elevation="12dp"
+                android:fontFamily="@font/buenard_bold"
+                android:text="@{place.placeName}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/item_background"
+                android:drawableStart="@drawable/info_location"
+                android:elevation="3dp"
+                android:fontFamily="@font/buenard"
+                android:text="@{place.location}"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/place_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/place_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_background"
+                android:drawableStart="@drawable/info_icon"
+                android:elevation="3dp"
+                android:fontFamily="@font/buenard"
+                android:text="@{place.kind}"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/location"
+                app:layout_constraintTop_toBottomOf="@+id/location" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/directions_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/item_background"
+                android:clickable="true"
+                android:drawableStart="@drawable/directions_icon"
+                android:elevation="3dp"
+                android:text="Directions"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/place_info"
+                app:layout_constraintTop_toBottomOf="@+id/place_info" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
